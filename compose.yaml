@@ -1,0 +1,19 @@
+# TP0 : complétez les TODO pour obtenir une application opérationnelle.
+services:
+  db:
+    image: postgres:16-alpine
+    # TODO : renseigner les variables POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD
+    # TODO : déclarer un volume pour les données PostgreSQL
+    # TODO : monter sql/01-init.sql en lecture seule dans /docker-entrypoint-initdb.d/
+    # TODO : définir un healthcheck (pg_isready)
+    # TODO : rattacher le service au réseau privé
+
+  api:
+    # TODO : construire l'image à partir de ./taskflow-api
+    # TODO : publier uniquement le port API sur 127.0.0.1
+    # TODO : configurer DB_HOST, DB_PORT, DB_NAME, DB_USER, DB_PASSWORD, PORT
+    # TODO : attendre le statut healthy de db
+    # TODO : rattacher le service au réseau privé
+
+# TODO : déclarer le volume nommé db-data
+# TODO : déclarer le réseau interne app-net
